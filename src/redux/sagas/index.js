@@ -2,7 +2,10 @@ import { all } from 'redux-saga/effects';
 import loginSaga from './loginSaga';
 import registrationSaga from './registrationSaga';
 import userSaga from './userSaga';
+import getShelfSaga from './getShelfSaga';
+import deleteShelfItemSaga from './deleteShelfItemSaga';
 import postItemSaga from "./postItemSaga";
+
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -16,6 +19,8 @@ export default function* rootSaga() {
     loginSaga(),
     registrationSaga(),
     userSaga(),
+    getShelfSaga(),
+    deleteShelfItemSaga(),
     postItemSaga(),
   ]);
 }

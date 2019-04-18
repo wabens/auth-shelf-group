@@ -1,4 +1,5 @@
 import React from 'react';
+import ShelfList from '../ShelfList/ShelfList';
 import ItemForm from "../ItemForm/ItemForm"; 
 
 // This is one of our simplest components
@@ -8,9 +9,9 @@ import ItemForm from "../ItemForm/ItemForm";
 
 const InfoPage = () => (
   <div>
-    
-     <ItemForm /> 
-
+    <h1>Item Shelf</h1>
+      <ItemForm /> 
+      <ShelfList />
   </div>
 );
 
