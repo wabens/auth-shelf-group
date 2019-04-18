@@ -19,7 +19,13 @@ class ItemForm extends Component {
         console.log(`state on submit: `, this.state.newItem);
 
         // dispatch straight to postItemSaga
-          this.props.dispatch({ type: 'POST_ITEM', payload: this.state.newItem })
+        this.props.dispatch({ type: 'POST_ITEM', payload: this.state.newItem })
+        this.setState({ 
+            newItem: {
+                description: '',
+                image_url: ''
+            } // end newItem 
+        })
     }
 
     handleChange = (event) => {
