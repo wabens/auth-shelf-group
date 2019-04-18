@@ -1,4 +1,5 @@
 import React from 'react';
+import ItemForm from "../ItemForm/ItemForm"; 
 
 // This is one of our simplest components
 // It doesn't have local state, so it can be a function component.
@@ -7,9 +8,9 @@ import React from 'react';
 
 const InfoPage = () => (
   <div>
-    <p>
-      Info Page
-    </p>
+    
+     <ItemForm /> 
+
   </div>
 );
 
