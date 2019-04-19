@@ -66,7 +66,18 @@ router.put('/:id', (req, res) => {
  * they have added to the shelf
  */
 router.get('/count', (req, res) => {
+    let sqlText = `SELECT "user"."username", COUNT("item"."user_id") FROM "user"
+                    JOIN "item" ON "item"."user_id" = "user"."id"
+                    GROUP BY "user"."username"; `;
 
+    pool.query(sqlText)
+        .then((result) => {
+            res.send(result.rows);
+        })
+        .catch((error) => {
+            console.log(`Couldn't GET user info.`, error);
+            res.sendStatus(500);
+        })
 });
 
 

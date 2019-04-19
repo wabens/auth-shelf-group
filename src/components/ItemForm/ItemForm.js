@@ -41,7 +41,7 @@ class ItemForm extends Component {
 
   render() {
     return (
-      <div>
+      <section>
           <form onSubmit={this.submitNewItem}>
               <input placeholder="description" value={this.state.newItem.description} onChange={this.handleChange} name="description"/> 
               <input placeholder="image URL" value={this.state.newItem.image_url} onChange={this.handleChange} name="image_url"/> 
@@ -50,7 +50,7 @@ class ItemForm extends Component {
               {/* uncomment to test reduxState */}
               {/* {JSON.stringify(this.props.reduxState.user.id)} */}
           </form>
-      </div>
+      </section>
     );
   }
 
